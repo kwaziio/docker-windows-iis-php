@@ -31,3 +31,6 @@ Add-WebConfiguration "/system.webServer/fastCgi" -value @{fullPath="C:\\php\\php
 
 Write-Output "Creating Default (Empty) PHP Index File for Validation..."
 "<?php phpinfo(); ?>" | Set-Content C:\\inetpub\wwwroot\index.php
+
+Write-Output "Making 'index.php' the Default Document for All IIS Applications..."
+Add-WebConfigurationProperty -PSPath "MACHINE/WEBROOT/APPHOST" -Filter "system.webServer/defaultDocument/files" -Name "." -Value @{value="index.php"}

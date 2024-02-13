@@ -1,0 +1,22 @@
+#############################################
+# Ignores Downloaded and Generated Archives #
+#############################################
+
+**/*.tar.gz
+**/*.tgz
+**/*.zip
+
+############################################
+# Ignores Personalized Configuration Files #
+############################################
+
+config/*
+!config/.gitkeep
+!config/example.pkrvars.hcl
+
+########################################
+# Ignores Temporary Resource Directory #
+########################################
+
+temp/*
+!temp/.gitkeep
